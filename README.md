@@ -38,3 +38,12 @@ req.method = "<GET, POST, ...>";
 req.header["Header-Name"] = "Header-Content";
 req.body = "<Request body>";
 ```
+### response properties
+
+```c++
+http::response resp = http::open(req);
+
+resp.status_line; // should be "HTTP/1.1 200 OK" if request good
+resp.header["Header-Name"] // returns contents of header
+resp.body // returns body of response
+```
